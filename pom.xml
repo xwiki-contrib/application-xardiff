@@ -9,7 +9,7 @@
   <artifactId>xwiki-application-importexport</artifactId>
   <packaging>xar</packaging>
   <name>Contrib - Applications - XAR Diff</name>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
   <description>Application that allows to compare two XARs</description>
   <scm>
     <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</connection>
