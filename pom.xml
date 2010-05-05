@@ -5,8 +5,8 @@
     <version>15</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.xpn.xwiki.platform.applications</groupId>
-  <artifactId>xwiki-application-importexport</artifactId>
+  <groupId>org.xwiki.contrib</groupId>
+  <artifactId>xwiki-application-xardiff</artifactId>
   <packaging>xar</packaging>
   <name>Contrib - Applications - XAR Diff</name>
   <version>1.0-SNAPSHOT</version>
