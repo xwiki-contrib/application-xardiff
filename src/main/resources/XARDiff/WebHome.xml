@@ -65,7 +65,7 @@
 #set ($diffTool = $xwiki.parseGroovyFromPage("XARDiff.GroovyDiff", "XARDiff.GroovyDiff"))
 
 #set ($oldURL = "http://maven.xwiki.org/releases/com/xpn/xwiki/products/xwiki-enterprise-wiki/1.9-rc-1/xwiki-enterprise-wiki-1.9-rc-1.xar")
-#set ($newURL = "http://maven.xwiki.org/snapshots/com/xpn/xwiki/products/xwiki-enterprise-wiki/1.9-SNAPSHOT/xwiki-enterprise-wiki-1.9-20090603.133855-805.xar")
+#set ($newURL = "http://maven.xwiki.org/releases/com/xpn/xwiki/products/xwiki-enterprise-wiki/1.9/xwiki-enterprise-wiki-1.9.xar")
 
 #set ($oldContents = $diffTool.getZipContent($oldURL))
 #set ($newContents = $diffTool.getZipContent($newURL))
