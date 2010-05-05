@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>xwiki-applications</artifactId>
+    <groupId>com.xpn.xwiki.platform.applications</groupId>
+    <version>15</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.xpn.xwiki.platform.applications</groupId>
+  <artifactId>xwiki-application-importexport</artifactId>
+  <packaging>xar</packaging>
+  <name>Contrib - Applications - XAR Diff</name>
+  <version>1.4-SNAPSHOT</version>
+  <description>Application that allows to compare two XARs</description>
+  <scm>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</url>
+  </scm>
+</project>
+

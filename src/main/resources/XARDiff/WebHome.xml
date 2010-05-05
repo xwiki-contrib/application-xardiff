@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+<web>XARDiff</web>
+<name>WebHome</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1244049100000</creationDate>
+<date>1244049149000</date>
+<contentUpdateDate>1244049149000</contentUpdateDate>
+<version>1.1</version>
+<title>XARDiff</title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.0</syntaxId>
+<hidden>false</hidden>
+<object>
+<class>
+<name>XWiki.TagClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<tags>
+<cache>0</cache>
+<displayType>input</displayType>
+<multiSelect>1</multiSelect>
+<name>tags</name>
+<number>1</number>
+<prettyName>Tags</prettyName>
+<relationalStorage>1</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<values></values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</tags>
+</class>
+<name>XARDiff.WebHome</name>
+<number>0</number>
+<className>XWiki.TagClass</className>
+<guid>d8723fd5-c243-4841-b8d7-6d683ea968f0</guid>
+<property>
+<tags/>
+</property>
+</object>
+<content>= Modified pages =
+
+{{toc/}}
+
+{{velocity}}
+#set ($diffTool = $xwiki.parseGroovyFromPage("XARDiff.GroovyDiff", "XARDiff.GroovyDiff"))
+
+#set ($oldURL = "http://maven.xwiki.org/releases/com/xpn/xwiki/products/xwiki-enterprise-wiki/1.9-rc-1/xwiki-enterprise-wiki-1.9-rc-1.xar")
+#set ($newURL = "http://maven.xwiki.org/snapshots/com/xpn/xwiki/products/xwiki-enterprise-wiki/1.9-SNAPSHOT/xwiki-enterprise-wiki-1.9-20090603.133855-805.xar")
+
+#set ($oldContents = $diffTool.getZipContent($oldURL))
+#set ($newContents = $diffTool.getZipContent($newURL))
+
+#foreach ($key in $newContents.keySet())
+ #set ($newContent = $newContents.get($key))
+ #set ($oldContent = $oldContents.get($key))
+ #if ($oldContent &amp;&amp; !$newContent.equals($oldContent) &amp;&amp; $key != "package.xml")
+== $key ==
+{{html clean="false"}}$diffTool.diff($oldContent, $newContent){{/html}}
+ #end
+#end
+{{/velocity}}
+</content></xwikidoc>
