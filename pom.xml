@@ -12,9 +12,9 @@
   <version>1.1-SNAPSHOT</version>
   <description>Application that allows to compare two XARs</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/contrib/projects/xwiki-application-xardiff/trunk/</url>
+    <connection>scm:git:git://github.com/xwiki-contrib/application-xardiff.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xardiff.git</developerConnection>
+    <url>https://github.com/xwiki-contrib/application-xardiff</url>
   </scm>
 </project>
 
